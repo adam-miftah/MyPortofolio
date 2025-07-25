@@ -136,3 +136,266 @@ body {
   border-radius: 0.5rem;
  }
 }
+
+
+/*=========================*/
+/* About Section Styling   */
+/*=========================*/
+.about-section {
+  padding: 100px 0;
+  background-color: #1a2230; /* Warna solid untuk menutupi partikel */
+  position: relative; /* Wajib ada agar z-index berfungsi */
+  z-index: 2; /* Pastikan section ini di atas partikel (z-index: 1) */
+  overflow: hidden;
+}
+
+
+.about-image-container {
+   position: relative;
+   padding: 10px;
+   border: 2px solid #9333ea;
+   border-radius: 15px;
+   max-width: 350px;
+   margin: 0 auto; 
+   margin-top: 6rem; /* <-- TAMBAHKAN BARIS INI untuk mendorong gambar ke bawah */
+}
+
+.about-heading {
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background-color: #9333ea;
+}
+
+.about-subheading {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: #94a3b8;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-top: 1.5rem;
+}
+
+/* ...dengan blok CSS ini */
+
+.skills-heading {
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: #f8fafc;
+   margin-top: 2.5rem;
+   margin-bottom: 1.5rem;
+  text-align: center; /* <-- Tambahkan ini untuk memusatkan judul */
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 110px); 
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 650px; /* <-- Tambahkan ini untuk membatasi lebar */
+  margin: 0 auto; /* <-- Tambahkan ini untuk memusatkan grid itu sendiri */
+}
+
+/* Ganti semua aturan .skill-item, .skill-item:hover, dan .skill-icon dengan ini */
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 15px; /* Sedikit lebih melengkung untuk efek kaca */
+  cursor: pointer;
+  
+  /* Efek Kaca (Glassmorphism) */
+  background: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
+  backdrop-filter: blur(8px); /* Efek blur pada konten di belakangnya */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Pinggiran tipis */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  transition: background 0.3s ease;
+}
+
+.skill-item:hover {
+  /* Saat di-hover, buat sedikit lebih terang */
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  /* Warna akan diatur dari komponen React, jadi tidak ada 'color' di sini */
+}
+
+.skill-name {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+
+/*=========================*/
+/* Projects Section Styling */
+/*=========================*/
+
+.projects-section {
+  padding: 100px 0;
+  background-color: #1e293b;
+  position: relative;
+  z-index: 3;
+}
+
+.section-heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: #f8fafc;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background-color: #9333ea;
+}
+
+.section-subheading {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 4rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* DESAIN KARTU BARU (ELEGAN & RAPI) */
+.project-card {
+  background: #111827 !important; /* Warna dark-blue, hampir hitam */
+  border: 1px solid #374151 !important;
+  border-radius: 12px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 3px 10px #9333ea;
+}
+
+/* Wrapper untuk gambar */
+.project-image-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+.project-card-img {
+  height: 220px;
+  width: 100px;
+  object-fit: fill;
+  transition: transform 0.4s ease;
+}
+
+/* Efek zoom pada gambar saat hover */
+.project-image-wrapper:hover .project-card-img {
+  transform: scale(1.05);
+}
+
+/* Overlay yang muncul saat gambar di-hover */
+.project-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 24, 39, 0.7); /* Background overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image-wrapper:hover .project-image-overlay {
+  opacity: 1;
+}
+
+.project-card .card-body {
+  padding: 1.5rem;
+}
+
+.project-title {
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.project-description {
+  color: #9ca3af; /* Warna abu-abu lebih terang */
+  font-size: 0.9rem;
+  flex-grow: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Wrapper untuk ikon-ikon teknologi */
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; /* Jarak antar ikon */
+  align-items: center;
+}
+
+/* Styling untuk setiap ikon */
+.project-tech-icon {
+  font-size: 1.75rem; /* Ukuran ikon */
+  transition: transform 0.3s ease;
+}
+
+.project-tech-icon:hover {
+  transform: scale(1.2); /* Sedikit membesar saat di-hover */
+}
+
+/* Tautan Ikon (pengganti tombol) */
+.project-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.project-links a {
+  color: #9ca3af;
+  font-size: 1.25rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
