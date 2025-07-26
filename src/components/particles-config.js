@@ -1,7 +1,7 @@
 const particlesConfig = {
   background: {
     color: {
-      value: "#1e293b", // Warna background light gray
+      value: "#1e293b", 
     },
   },
   fpsLimit: 120,

@@ -1,15 +1,10 @@
-// components/ProjectsSection.js
-
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Spinner, Alert } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import '../CSS/styles.css';
 
-// KONFIGURASI PROYEK ANDA (STRUKTUR BARU)
 const GITHUB_USERNAME = "adam-miftah";
-
-// Definisikan setiap proyek dengan teknologinya secara manual
 const projectsConfig = [
   { 
     name: "app-sistem-akademik",
@@ -43,7 +38,7 @@ function ProjectsSection() {
             throw new Error(`Repo: ${config.name} tidak ditemukan.`);
           }
           return response.json();
-        }).then(repoData => ({ // Gabungkan data dari API dengan data manual kita
+        }).then(repoData => ({ 
           ...repoData,
           manualTech: config.technologies
         }))
@@ -56,7 +51,7 @@ function ProjectsSection() {
           title: repoData.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
           description: repoData.description || "Tidak ada deskripsi.",
           imgSrc: `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${repoData.name}/main/cover.png`,
-          tech: repoData.manualTech, // <-- Gunakan daftar teknologi manual
+          tech: repoData.manualTech,
           githubLink: repoData.html_url,
           demoLink: repoData.homepage || repoData.html_url,
         }));

@@ -1,264 +1,14 @@
+/*=========================*/
+/* STYLING GLOBAL & DASAR  */
+/*=========================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
 
 body {
- font-family: 'Poppins', sans-serif;
- background-color: #1e293b; 
- color: #f8fafc; 
- overflow: hidden;
-}
-
-/* Navbar Styling */
-.portfolio-navbar {
- padding: 1rem 0;
- background-color: #1e293b !important;
- box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-.navbar-brand-name {
- font-weight: 700;
- font-size: 1.25rem;
- letter-spacing: 1px;
-}
-.portfolio-navbar .nav-link {
-  color: #f8fafc !important;
-  font-weight: 500;
-  position: relative; 
-  padding-bottom: 0.5rem; 
-  transition: color 0.3s ease;
-}
-/* Efek Underline saat Hover */
-.portfolio-navbar .nav-link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #c084fc;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.portfolio-navbar .nav-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-/* Style untuk Nav Link yang sedang Aktif atau di-Hover */
-.portfolio-navbar .nav-link.active,
-.portfolio-navbar .nav-link:hover {
- color: #c084fc !important;
-}
-
-/* Hero Section Styling */
-.hero-section {
- height: 100vh;
- position: relative;
- display: flex;
- align-items: center;
- overflow: hidden;
-}
-.hero-title {
- font-size: clamp(2.2rem, 8vw, 4rem);
- font-weight: 900;
- color: #f8fafc;
- margin-bottom: 1rem;
- line-height: 1.2;
-}
-.hero-subtitle {
- font-size: clamp(0.9rem, 4vw, 1.15rem);
- max-width: 650px;
- margin: 0 auto 2.5rem auto;
- color: #94a3b8; /* Warna teks abu-abu terang */
- line-height: 1.8;
-}
-.hero-button {
- background-color: #9333ea;
- border-color: #9333ea;
- padding: 1rem 2.5rem;
- font-weight: 600;
- letter-spacing: 1px;
- text-transform: uppercase;
- transition: all 0.3s ease;
-}
-.hero-button:hover {
- background-color: #7e22ce;
- border-color: #7e22ce;
- transform: translateY(-5px);
- box-shadow: 0 10px 20px -10px #9333ea;
-}
-
-/* Social Sidebar Styling */
-.social-sidebar {
- position: fixed;
- top: 50%;
- left: 20px;
- transform: translateY(-50%) !important;
- display: flex;
- flex-direction: column;
- gap: 1.5rem;
- z-index: 10;
- background-color: rgba(15, 23, 42, 0.8);
- padding: 1rem 0.75rem;
- border-radius: 99px;
- box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-}
-.social-sidebar a {
- font-size: 1.5rem;
- color: #ffffff;
- transition: all 0.3s ease;
-}
-.social-sidebar a:hover {
-  color: #f8fafc;
-}
-
-/*********************************/
-/* ATURAN RESPONSIVE (MEDIA QUERY) */
-/*********************************/
-@media (max-width: 991.98px) {
- .social-sidebar {
-  display: none;
- }
- .hero-section .container {
-  padding-left: 2rem;
-  padding-right: 2rem;
- }
-}
-@media (max-width: 767.98px) {
- .hero-button {
-  padding: 0.8rem 2rem;
-  font-size: 0.9rem;
- }
- .navbar-collapse {
-  text-align: center;
-  background-color: #1e293b; /* Beri BG saat menu mobile terbuka */
-  padding: 1rem;
-  margin-top: 0.5rem;
-  border-radius: 0.5rem;
- }
-}
-
-
-/*=========================*/
-/* About Section Styling   */
-/*=========================*/
-.about-section {
-  padding: 100px 0;
-  background-color: #1a2230; /* Warna solid untuk menutupi partikel */
-  position: relative; /* Wajib ada agar z-index berfungsi */
-  z-index: 2; /* Pastikan section ini di atas partikel (z-index: 1) */
-  overflow: hidden;
-}
-
-
-.about-image-container {
-   position: relative;
-   padding: 10px;
-   border: 2px solid #9333ea;
-   border-radius: 15px;
-   max-width: 350px;
-   margin: 0 auto; 
-   margin-top: 6rem; /* <-- TAMBAHKAN BARIS INI untuk mendorong gambar ke bawah */
-}
-
-.about-heading {
-  font-weight: 700;
-  font-size: clamp(2rem, 5vw, 2.5rem);
-  color: #f8fafc;
-  margin-bottom: 0.5rem;
-  position: relative;
-  display: inline-block;
-}
-
-.about-heading::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60%;
-  height: 4px;
-  background-color: #9333ea;
-}
-
-.about-subheading {
-  font-size: clamp(1rem, 3vw, 1.2rem);
-  color: #94a3b8;
-  margin-top: 2rem;
-  font-style: italic;
-}
-
-.about-text {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #cbd5e1;
-  margin-top: 1.5rem;
-}
-
-/* ...dengan blok CSS ini */
-
-.skills-heading {
-   font-size: 1.5rem;
-   font-weight: 600;
-   color: #f8fafc;
-   margin-top: 2.5rem;
-   margin-bottom: 1.5rem;
-  text-align: center; /* <-- Tambahkan ini untuk memusatkan judul */
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 110px); 
-  gap: 1.5rem;
-  justify-content: center;
-  max-width: 650px; /* <-- Tambahkan ini untuk membatasi lebar */
-  margin: 0 auto; /* <-- Tambahkan ini untuk memusatkan grid itu sendiri */
-}
-
-/* Ganti semua aturan .skill-item, .skill-item:hover, dan .skill-icon dengan ini */
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  border-radius: 15px; /* Sedikit lebih melengkung untuk efek kaca */
-  cursor: pointer;
-  
-  /* Efek Kaca (Glassmorphism) */
-  background: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
-  backdrop-filter: blur(8px); /* Efek blur pada konten di belakangnya */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Pinggiran tipis */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bayangan halus */
-  transition: background 0.3s ease;
-}
-
-.skill-item:hover {
-  /* Saat di-hover, buat sedikit lebih terang */
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.skill-icon {
-  font-size: 2.5rem;
-  /* Warna akan diatur dari komponen React, jadi tidak ada 'color' di sini */
-}
-
-.skill-name {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #f8fafc;
-}
-
-
-/*=========================*/
-/* Projects Section Styling */
-/*=========================*/
-
-.projects-section {
-  padding: 100px 0;
-  background-color: #1e293b;
-  position: relative;
-  z-index: 3;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e293b; 
+  color: #f8fafc; 
+  overflow-y: auto; 
+  overflow-x: hidden; 
 }
 
 .section-heading {
@@ -272,6 +22,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .section-heading::after {
   content: '';
   position: absolute;
@@ -292,21 +43,196 @@ body {
   margin-right: auto;
 }
 
-/* DESAIN KARTU BARU (ELEGAN & RAPI) */
+
+/*Navbar Styling          */
+.portfolio-navbar {
+  padding: 1rem 0;
+  background-color: #1e293b !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
+.portfolio-navbar .nav-link {
+  color: #f8fafc !important;
+  font-weight: 500;
+  position: relative; 
+  padding-bottom: 0.5rem; 
+  transition: color 0.3s ease;
+}
+.portfolio-navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #c084fc;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.portfolio-navbar .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.portfolio-navbar .nav-link.active,
+.portfolio-navbar .nav-link:hover {
+  content: '';
+  color: #c084fc !important;
+}
+
+/* Hero Section Styling    */
+.hero-section {
+  min-height: calc(100vh - 70px); 
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 70px; 
+}
+.hero-title {
+  font-size: clamp(1rem, 7vw, 3rem);
+  font-weight: 900;
+  color: #f8fafc;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.hero-subtitle {
+  font-size: clamp(0.9rem, 4vw, 1.15rem);
+  max-width: 650px;
+  margin: 0 auto 2.5rem auto;
+  color: #94a3b8;
+  line-height: 1.8;
+}
+.hero-button {
+  background-color: #9333ea;
+  border-color: #9333ea;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.hero-button:hover {
+  background-color: #7e22ce;
+  border-color: #7e22ce;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px #9333ea;
+}
+
+
+/* Social Sidebar Styling  */
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 10;
+  background-color: rgba(15, 23, 42, 0.8);
+  padding: 1rem 0.75rem;
+  border-radius: 99px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+.social-sidebar a {
+  font-size: 1.5rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.social-sidebar a:hover {
+  color: #9333ea;
+}
+
+/* About Section Styling   */
+.about-section {
+  padding: 100px 0;
+  background-color: #1a2230;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.about-image-container {
+  position: relative;
+  padding: 10px;
+  border: 2px solid #9333ea;
+  border-radius: 15px;
+  max-width: 350px;
+  margin: 0 auto; 
+  margin-top: 2.75rem;
+}
+.about-subheading {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: #94a3b8;
+  margin-top: 2.5rem;
+  font-style: italic;
+}
+.about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-top: 1.5rem;
+}
+.skills-wrapper {
+  margin-top: 5rem;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 110px); 
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+.skill-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.skill-icon {
+  font-size: 2.5rem;
+}
+.skill-name {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+/* Projects Section Styling */
+.projects-section {
+  padding: 100px 0;
+  background-color: #1e293b;
+  position: relative;
+  z-index: 3;
+}
 .project-card {
-  background: #111827 !important; /* Warna dark-blue, hampir hitam */
+  background: #111827 !important;
   border: 1px solid #374151 !important;
   border-radius: 12px !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
-
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 3px 10px #9333ea;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
-
-/* Wrapper untuk gambar */
 .project-image-wrapper {
   position: relative;
   display: block;
@@ -314,27 +240,22 @@ body {
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
 }
-
 .project-card-img {
   height: 220px;
-  width: 100px;
+  width: 100%;
   object-fit: fill;
   transition: transform 0.4s ease;
 }
-
-/* Efek zoom pada gambar saat hover */
 .project-image-wrapper:hover .project-card-img {
   transform: scale(1.05);
 }
-
-/* Overlay yang muncul saat gambar di-hover */
 .project-image-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(17, 24, 39, 0.7); /* Background overlay */
+  background: rgba(17, 24, 39, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,60 +263,195 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 .project-image-wrapper:hover .project-image-overlay {
   opacity: 1;
 }
-
 .project-card .card-body {
   padding: 1.5rem;
 }
-
 .project-title {
   color: #f8fafc;
   font-weight: 600;
   font-size: 1.25rem;
 }
-
 .project-description {
-  color: #9ca3af; /* Warna abu-abu lebih terang */
+  color: #9ca3af;
   font-size: 0.9rem;
   flex-grow: 1;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
 }
-
-/* Wrapper untuk ikon-ikon teknologi */
 .project-tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem; /* Jarak antar ikon */
+  gap: 0.75rem;
   align-items: center;
 }
-
-/* Styling untuk setiap ikon */
 .project-tech-icon {
-  font-size: 1.75rem; /* Ukuran ikon */
+  font-size: 1.75rem;
   transition: transform 0.3s ease;
 }
-
 .project-tech-icon:hover {
-  transform: scale(1.2); /* Sedikit membesar saat di-hover */
+  transform: scale(1.2);
 }
-
-/* Tautan Ikon (pengganti tombol) */
 .project-links {
   display: flex;
   gap: 1.25rem;
 }
-
 .project-links a {
   color: #9ca3af;
   font-size: 1.25rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .project-links a:hover {
   color: #ffffff;
   transform: scale(1.1);
+}
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 100px 0;
+  background-color: #1a2230;
+  position: relative;
+  z-index: 4;
+}
+.contact-form-wrapper {
+  background: #111827;
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 1px solid #374151;
+}
+.contact-form-input {
+  background-color: #374151 !important;
+  border: 1px solid #4b5563 !important;
+  color: #f8fafc !important;
+  padding: 0.75rem 1rem;
+}
+.contact-form-input::placeholder {
+  color: #9ca3af !important;
+}
+.contact-form-input:focus {
+  box-shadow: 0 0 0 0.25rem rgba(147, 51, 234, 0.25) !important;
+}
+.contact-submit-btn {
+  background-color: #9333ea !important;
+  border-color: #9333ea !important;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.contact-submit-btn:hover {
+  background-color: #7e22ce !important;
+  border-color: #7e22ce !important;
+  transform: translateY(-3px);
+}
+
+/* Footer Section Styling  */
+.footer-section {
+  background-color: #111827;
+  padding: 50px 0;
+  position: relative;
+  z-index: 5;
+  border-top: 1px solid #374151;
+}
+.footer-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f8fafc;
+  letter-spacing: 1px;
+}
+.footer-tagline {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.footer-social-icons a {
+  color: #9ca3af;
+  font-size: 1.75rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.footer-social-icons a:hover {
+  color: #9333ea;
+  transform: translateY(-5px);
+}
+.footer-copyright {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+
+/* RESPONSIVE (MEDIA QUERY) */
+/* Tablet (di bawah 992px) */
+@media (max-width: 991.98px) {
+  .social-sidebar {
+    display: none;
+  }
+  
+  .about-image-container {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .about-section .row, .contact-section .row {
+    flex-direction: column;
+  }
+}
+
+/* Mobile (di bawah 768px) */
+@media (max-width: 767.98px) {
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+  .section-subheading {
+    margin-bottom: 3rem;
+  }
+
+  /* Navbar */
+  .navbar-collapse {
+    text-align: center;
+    background-color: #1e293b;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #374151;
+  }
+
+  /* Hero */
+  .hero-button {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+  .hero-section {
+    align-items: flex-start; 
+    padding-top: 12vh; 
+  }
+
+  /* About */
+  .about-text {
+    text-align: center;
+  }
+  .about-image-container {
+    margin-top: 0;
+    margin-bottom: -2rem; 
+  }
+
+  /* Contact */
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  /* Footer */
+  .footer-name {
+    font-size: 1.2rem;
+  }
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
 }

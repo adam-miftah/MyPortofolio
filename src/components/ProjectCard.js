@@ -1,23 +1,17 @@
-// components/ProjectCard.js
-
-import React from 'react';
 import { Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-// Hapus SiBlade dari import 'si'
 import { FaGithub, FaExternalLinkAlt, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaBootstrap, FaPhp, FaLaravel, FaVuejs } from 'react-icons/fa';
-import { SiMysql, SiPython, SiJupyter } from "react-icons/si"; // <-- SiBlade dihapus
+import { SiMysql, SiPython, SiJupyter } from "react-icons/si"; 
 
-// Peta Warna untuk setiap teknologi
 const techColorMap = {
   REACT: "#61DAFB", JAVASCRIPT: "#F7DF1E", NODEJS: "#339933",
   HTML5: "#E34F26", HTML: "#E34F26", CSS3: "#1572B6", CSS: "#1572B6",
   BOOTSTRAP: "#7952B3", PHP: "#777BB4", LARAVEL: "#FF2D20",
   MYSQL: "#4479A1", VUEJS: "#4FC08D", VUE: "#4FC08D",
-  PYTHON: "#3776AB", JUPYTER: "#F37626", BLADE: "#FF2D20", // <-- Warna Blade disamakan dengan Laravel
+  PYTHON: "#3776AB", JUPYTER: "#F37626", BLADE: "#FF2D20", 
   DEFAULT: "#6c757d",
 };
 
-// PETA IKON BARU
 const techIconMap = {
   REACT: <FaReact />, JAVASCRIPT: <FaJsSquare />, NODEJS: <FaNodeJs />,
   HTML: <FaHtml5 />, CSS: <FaCss3Alt />, BOOTSTRAP: <FaBootstrap />,

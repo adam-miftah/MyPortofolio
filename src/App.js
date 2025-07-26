@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PortfolioNavbar from './components/PortfolioNavbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import ProjectsSection from './components/ProjectsSection';
 import SocialSidebar from './components/SocialSidebar';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 import './CSS/styles.css';
-
-const ContactSection = () => <section id="contact" style={{ height: '100vh', padding: '60px' }}><h2>Contact Me</h2></section>
 
 function App() {
   const [activeLink, setActiveLink] = useState('#home');
@@ -29,7 +29,6 @@ function App() {
       }
     };
 
-    // Ganti ini jika Anda ingin bisa scroll
     document.body.style.overflowY = 'auto';
 
     window.addEventListener('scroll', handleScroll);
@@ -40,12 +39,13 @@ function App() {
   return (
     <div>
       <PortfolioNavbar activeLink={activeLink} />
-      <SocialSidebar />
+      {/* <SocialSidebar /> */}
       <main>
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
         <ContactSection />
+        <Footer />
       </main>
     </div>
   );

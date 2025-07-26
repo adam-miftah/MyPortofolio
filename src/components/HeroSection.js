@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Particles from "react-tsparticles";
@@ -54,7 +54,7 @@ function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.8 }}
             >
-              A Result-Oriented Web Developer building and managing Websites and Web Applications that leads to the success of the overall product
+              Seorang Junior Web Developer yang bersemangat dalam membangun aplikasi web yang responsif dan ramah pengguna. Saya senang belajar teknologi baru dan mengubah ide-ide kreatif menjadi kode.
             </motion.p>
             
             <motion.div
