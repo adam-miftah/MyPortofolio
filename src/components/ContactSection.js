@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa'; 
+import { FaEnvelope } from 'react-icons/fa'; 
 import '../CSS/styles.css';
 
 function ContactSection() {
@@ -17,13 +17,16 @@ function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = '6281319310355'; 
-    const waMessage = `Halo, nama saya ${formData.name}.\nEmail: ${formData.email}
 
-Pesan:
-${formData.message}`;
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
-    window.open(whatsappUrl, '_blank');
+    const yourEmail = 'adammiftah196@gmail.com'; 
+    const subject = `Pesan dari Portofolio - ${formData.name}`;
+    const body = `${formData.message}
+
+---
+Dikirim oleh: ${formData.name}
+Email: ${formData.email}`;
+    const mailtoUrl = `mailto:${yourEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
   };
   
   const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } };
@@ -35,7 +38,7 @@ ${formData.message}`;
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           <h2 className="section-heading">Hubungi Saya</h2>
           <p className="section-subheading">
-            Punya pertanyaan atau ingin berkolaborasi? Kirim pesan langsung ke WhatsApp saya.
+            Punya pertanyaan atau ingin berkolaborasi? Kirimkan pesan langsung ke email saya.
           </p>
           
           <Row className="justify-content-center">
@@ -85,7 +88,7 @@ ${formData.message}`;
                     </motion.div>
                     <motion.div variants={itemVariants} className="d-grid">
                       <Button variant="primary" type="submit" className="contact-submit-btn">
-                        <FaWhatsapp /> &nbsp;Kirim via WhatsApp
+                        <FaEnvelope /> &nbsp;Kirim via Email
                       </Button>
                     </motion.div>
                   </Form>
