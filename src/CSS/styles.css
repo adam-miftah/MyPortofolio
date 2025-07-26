@@ -435,7 +435,7 @@ body {
 
   /* About */
   .about-text {
-    text-align: center;
+    text-align: left;
   }
   .about-image-container {
     margin-top: 0;
