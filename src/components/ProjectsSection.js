@@ -11,13 +11,9 @@ const projectsConfig = [
     technologies: ["PHP", "JavaScript", "MySQL", "Laravel", "Bootstrap"]
   },
   {
-    name: "inventory-toko-material",
-    technologies: ["PHP", "Laravel", "MySQL"]
-  },
-  {
-    name: "lawfirm-website",
-    technologies: ["HTML", "CSS","JavaScript", "React", "Bootstrap"]
-  },
+    name:"movie-gallery",
+    technologies: ["HTML", "CSS", "JavaScript", "Vue", "Bootstrap"]
+  }
 ];
 
 function ProjectsSection() {

@@ -125,12 +125,15 @@ function AboutSection() {
                 Semangat Belajar dan Berkembang di Dunia Web Development.
               </motion.p>
               <motion.p className="about-text" variants={itemVariants}>
-                Halo! Saya Adam Miftahul Falah, seorang Junior Web Developer yang antusias dalam membangun dan mengembangkan aplikasi web. Perjalanan saya di dunia koding didorong oleh rasa ingin tahu yang besar untuk memecahkan masalah dan menciptakan solusi digital yang bermanfaat.
+                Halo! Saya Adam Miftahul Falah, seorang Junior Web Developer yang antusias dalam membangun dan mengembangkan aplikasi web. Perjalanan saya di dunia koding didorong oleh rasa ingin tahu yang besar untuk memecahkan masalah dan menciptakan solusi digital yang bermanfaat. Saya sangat menikmati proses mengubah desain statis menjadi antarmuka yang hidup dan interaktif.
               </motion.p>
               <motion.p className="about-text" variants={itemVariants}>
-                Sebagai seorang developer di awal karier, saya sangat termotivasi untuk belajar, berkolaborasi dengan tim, dan menerapkan fondasi <i>front-end</i> dan <i>back-end</i> yang saya miliki untuk berkontribusi pada proyek-proyek yang menantang. Saya percaya bahwa kemauan untuk terus belajar adalah kunci utama untuk bertumbuh di industri teknologi yang dinamis ini.
+                Dengan fondasi yang kuat di teknologi front-end seperti React dan Vue, serta back-end menggunakan Node.js dan PHP/Laravel, saya selalu tertantang untuk belajar lebih dalam. Saat ini, saya sedang fokus untuk memahami prinsip-prinsip arsitektur perangkat lunak yang bersih dan praktik terbaik dalam pengembangan untuk memastikan setiap baris kode yang saya tulis tidak hanya berfungsi, tetapi juga efisien dan mudah dipelihara.
               </motion.p>
             </Col>
+              {/* <motion.p className="about-text" variants={itemVariants}>
+                Sebagai seorang developer di awal karier, saya sangat termotivasi untuk belajar dari para senior, berkolaborasi secara aktif dalam tim, dan menerapkan keahlian yang saya miliki untuk berkontribusi pada proyek-proyek yang menantang. Saya percaya bahwa kemauan untuk terus belajar dan beradaptasi adalah kunci utama untuk bertumbuh di industri teknologi yang dinamis ini.
+              </motion.p> */}
           </Row>
         </motion.div>
               <motion.div variants={itemVariants}>
