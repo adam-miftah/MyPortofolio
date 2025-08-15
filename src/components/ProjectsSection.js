@@ -15,8 +15,8 @@ const projectsConfig = [
     technologies: ["HTML", "CSS", "JavaScript", "Vue", "Bootstrap"]
   },
   {
-    name: "app-sistem-akademik",
-    technologies: ["PHP", "MySQL", "Laravel", "Bootstrap"]
+    name: "inventory-toko-material",
+    technologies: ["PHP", "JavaScript", "MySQL", "Laravel", "Bootstrap"]
   }
 ];
 
