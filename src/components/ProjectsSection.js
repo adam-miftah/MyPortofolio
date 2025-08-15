@@ -13,6 +13,10 @@ const projectsConfig = [
   {
     name:"movie-gallery",
     technologies: ["HTML", "CSS", "JavaScript", "Vue", "Bootstrap"]
+  },
+  {
+    name: "app-sistem-akademik",
+    technologies: ["PHP", "MySQL", "Laravel", "Bootstrap"]
   }
 ];
 
