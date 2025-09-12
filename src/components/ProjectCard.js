@@ -1,6 +1,6 @@
 import { Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaBootstrap, FaPhp, FaLaravel, FaVuejs } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaBootstrap, FaPhp, FaLaravel, FaVuejs, RiTailwindCssFill } from 'react-icons/fa';
 import { SiMysql, SiPython, SiJupyter } from "react-icons/si"; 
 
 const techColorMap = {
@@ -17,7 +17,7 @@ const techIconMap = {
   HTML: <FaHtml5 />, CSS: <FaCss3Alt />, BOOTSTRAP: <FaBootstrap />,
   PHP: <FaPhp />, LARAVEL: <FaLaravel />, MYSQL: <SiMysql />,
   VUE: <FaVuejs />, PYTHON: <SiPython />, JUPYTER: <SiJupyter />,
-  BLADE: <FaLaravel />, 
+  BLADE: <FaLaravel />, TAILWIND: <RiTailwindCssFill />
 };
 
 
