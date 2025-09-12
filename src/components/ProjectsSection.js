@@ -20,7 +20,7 @@ const projectsConfig = [
   },
   {
     name: "sistem-penggajian",
-    tecnologies: ["PHP", "JavaScript", "MySQL", "Laravel", "Tailwind CSS"]
+    tecnologies: ["PHP", "JavaScript", "MySQL", "Laravel", "Tailwind"]
   }
 ];
 
