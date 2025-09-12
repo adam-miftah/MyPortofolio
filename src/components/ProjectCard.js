@@ -1,6 +1,6 @@
 import { Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaBootstrap, FaPhp, FaLaravel, FaVuejs, RiTailwindCssFill } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaBootstrap, FaPhp, FaLaravel, FaVuejs} from 'react-icons/fa';
 import { SiMysql, SiPython, SiJupyter,  } from "react-icons/si"; 
 import { RiTailwindCssFill } from "react-icons/ri";
 
