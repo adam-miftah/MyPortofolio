@@ -17,6 +17,10 @@ const projectsConfig = [
   {
     name: "inventory-toko-material",
     technologies: ["PHP", "JavaScript", "MySQL", "Laravel", "Bootstrap"]
+  },
+  {
+    name: "sistem-penggajian",
+    tecnologies: ["PHP", "JavaScript", "MySQL", "Laravel", "Tailwind CSS"]
   }
 ];
 
