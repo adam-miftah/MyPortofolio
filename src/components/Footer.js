@@ -37,7 +37,7 @@ function Footer() {
               </a>
             </div>
             <p className="footer-copyright">
-              &copy; {currentYear} Adam Miftahul Falah. Dibuat dengan React.
+              &copy; {currentYear} Adam Miftahul Falah.
             </p>
           </Col>
         </Row>
