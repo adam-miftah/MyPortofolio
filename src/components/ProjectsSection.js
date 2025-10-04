@@ -21,6 +21,14 @@ const projectsConfig = [
   {
     name: "sistem-penggajian",
     technologies: ["PHP", "JavaScript", "MySQL", "Laravel", "Bootstrap"]
+  },
+  {
+    name: "sistem-perpustakaan",
+    technologies: ["PHP", "JavaScript", "MySQL", "Laravel", "Bootstrap"]
+  },
+  {
+    name: "company-profile",
+    technologies: ["HTML", "CSS", "JavaScript", "Vue", "Bootstrap"]
   }
 ];
 
